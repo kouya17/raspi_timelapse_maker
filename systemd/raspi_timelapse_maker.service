@@ -1,0 +1,13 @@
+[Unit]
+Description=Raspi Timelapse Maker
+
+[Service]
+Environment=DISPLAY=:0.0
+Environment=XAUTHORITY=/home/pi/.Xauthority
+ExecStart=/home/pi/raspi_timelapse_maker/systemd/raspi_timelapse_maker.sh
+Restart=on-abort
+User=pi
+Group=pi
+
+[Install]
+WantedBy=multi-user.target
